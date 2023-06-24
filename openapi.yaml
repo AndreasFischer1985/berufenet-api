@@ -1,0 +1,105 @@
+openapi: "3.0.0"
+info:
+  title: "Arbeitsagentur Berufenet API"
+  description: |
+   Die Bundesagentur für Arbeit verfügt mit BERUFENET über das umfangreichste Lexikon der Berufe in Deutschland.
+   
+   **Client-ID:** d672172b-f3ef-4746-b659-227c39d95acf
+   
+   Die Client-ID muss bei allen GET-requests als Header-Feld 'X-API-Key' übergeben werden.
+  version: "1.0.0"
+  contact:
+    name: "AndreasFischer1985"
+    email: "andreasfischer1985@web.de"
+    url: "https://github.com/AndreasFischer1985/berufenet-api"
+
+
+servers:
+  - url: "https://rest.arbeitsagentur.de/infosysbub/bnet/pc/v1"
+
+paths:
+  /berufe:
+    get:
+      summary: BERUFENET-Berufeliste
+      description: "Berufenet ermöglicht die Abfrage von Berufs-ID und Kurzbezeichnung zu einer spezifizierten Teilmenge aller auf BERUFENET gelisteten Berufe. Die Spezifikation GET-Parameter, wobei maximal 20 Einträge pro Seite ausgegeben werden (siehe Parameter page)."
+      operationId: berufeliste
+      responses:
+        '200':
+            description: OK
+
+      parameters:
+
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: Seite (beginnend mit 0). Es werden maximal 20 Einträge pro Seite ausgegeben.
+          example: 0
+          required: false
+
+        - in: query
+          name: suchwoerter
+          schema:
+            type: string
+          description: |
+            Suchwörter: Eine Zeichenkette, die in den Informationen zu den angefragten Berufen auftauchen sollten. Ein Sternchen-Symbol ermöglicht die Abfrage aller Berufe.
+          example: "*"
+          required: false
+
+        - in: query
+          name: buchstabe
+          schema:
+            type: string
+          description: |
+            Buchstabe: Anfangsbuchstabe der angefragten Berufe. Hinweis: Neben Berufen, die mit Buchstaben von A-Z beginnen gibt es zwei Einträge, die auf diese Weise nicht angefragt werden können da sie mit einer Zahl beginnen.
+          example: a
+          required: false
+
+        - in: query
+          name: berufecluster
+          schema:
+            type: string
+          description: |
+            Berufecluster: "TC 0201" = reglementierte Berufe; "TC 101" = Mathematik; "TC 0102" = Informatik; "TC 0103" = Naturwissenschaft; "TC 104" = Technik. Mehrere Komma-separierte Einträge möglich, z.B. "TC 0101,TC 0102,TC 0103,TC 0104" für alle MINT-Berufe.
+          example: 0
+          required: false
+
+        - in: query
+          name: bg
+          schema:
+            type: string
+          description: |
+            Berufsgruppe: 100, 102, 105 (= Ausbildungsberufe); 200, 201, 203, 204 (= Weiterbildungsberufe); 300, 301, 302 (= Studienfächer); 400, 401, 402 (=Hochschulberufe); 500, 503 (=Beamtenlaufbahn), 700 (=Berufliche Einsatzmöglichkeiten). Mehrere Komma-separierte Einträge möglich.
+          example: "100, 102, 105"
+          required: false
+
+  /berufe{Berufs-ID}:
+    get:
+      summary: BERUFENET-Berufsinformationen
+      description: "Detailinformationen zu einem spezifischen Ausbildungsangebot."
+      operationId: ausbildungsdetails
+      responses:
+        '200':
+            description: OK
+      parameters:
+        - in: path
+          name: Berufs-ID
+          required: true
+          schema:
+            type: integer
+          description: |
+            Berufenet ermöglicht die Abfrage von umfangreichen Informationen zu einer Berufs-ID (z.B: 129987).
+security: 
+  - ApiKeyAuth: 
+    - "read"
+
+components: 
+  securitySchemes:
+    ApiKeyAuth:        
+      type: apiKey
+      in: header       
+      name: X-API-KEY  
+  
+externalDocs:
+  description: "Weiterführende Dokumentation"
+  url: "https://github.com/AndreasFischer1985/berufenet-api"
