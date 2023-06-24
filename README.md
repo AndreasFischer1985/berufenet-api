@@ -45,10 +45,6 @@ Berufecluster: "TC 0201" = reglementierte Berufe; "TC 101" = Mathematik; "TC 010
 Berufsgruppe: 100, 102, 105 (= Ausbildungsberufe); 200, 201, 203, 204 (= Weiterbildungsberufe); 300, 301, 302 (= Studienfächer); 400, 401, 402 (=Hochschulberufe); 500, 503 (=Beamtenlaufbahn), 700 (=Berufliche Einsatzmöglichkeiten). Mehrere Komma-separierte Einträge möglich.
 
 
-
-**URL:** https://rest.arbeitsagentur.de/infosysbub/bnet/pc/v1/berufe
-
-
 ### Beispiel:
 
 ```bash
