@@ -50,7 +50,7 @@ Berufsgruppe: 100, 102, 105 (= Ausbildungsberufe); 200, 201, 203, 204 (= Weiterb
 ```bash
 berufe=$(curl -m 60 \
 -H "X-API-Key: d672172b-f3ef-4746-b659-227c39d95acf" \
-"https://rest.arbeitsagentur.de/infosysbub/bnet/pc/v1/berufe?suchwoerter=*&page=20")
+"https://rest.arbeitsagentur.de/infosysbub/bnet/pc/v1/berufe?suchwoerter=*&page=0")
 ```
 
 
@@ -61,8 +61,9 @@ berufe=$(curl -m 60 \
 **URL:** https://rest.arbeitsagentur.de/infosysbub/bnet/pc/v1/berufe/{Berufs-ID}
 	
 Berufenet ermöglicht die Abfrage von umfangreichen Informationen zu einer Berufs-ID (z.B. 129987).
-- Berufs-ID,
-- kldb2010-Code,
+Die Informationen umfassen:
+- Berufs-ID
+- kldb2010-Code
 - Kurzbezeichnung
 - Bezeichnung
 - Code-Nr.
