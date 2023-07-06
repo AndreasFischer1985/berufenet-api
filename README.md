@@ -17,7 +17,7 @@ Die Client-ID muss bei allen GET-requests als Header-Feld 'X-API-Key' übergeben
 
 **URL:** https://rest.arbeitsagentur.de/infosysbub/bnet/pc/v1/berufe
 	
-Berufenet ermöglicht die Abfrage von Berufs-ID und Kurzbezeichnung zu einer spezifizierten Teilmenge aller auf BERUFENET gelisteten Berufe. Die Spezifikation GET-Parameter, wobei maximal 20 Einträge pro Seite ausgegeben werden (siehe Parameter page).
+Berufenet ermöglicht die Abfrage von Berufs-ID und Kurzbezeichnung zu einer spezifizierten Teilmenge aller auf BERUFENET gelisteten Berufe. Die Spezifikation erfolgt über GET-Parameter, wobei maximal 20 Einträge pro Seite ausgegeben werden (siehe Parameter page).
 
 
 ### Parameter
