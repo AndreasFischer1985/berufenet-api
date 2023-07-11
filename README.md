@@ -77,13 +77,13 @@ Die Informationen umfassen:
 - Steckbrief
 - Aufstiegsweiterbildungen
 - Anpassungsweiterbildungen
-- Fachrichtunge
+- Fachrichtungen
 - Meta-Fachrichtung
 - Tätigkeitsfelder
 - Einsatzmöglichkeiten
 - Metaeinheit
 
-Zu Ausbildungsberufen, Weiterbildungsberufen und Studiengängen werden darüber hinaus idR. Informationen zu einer zugeordneten Tätigkeit ausgewiesen (mit separater Berufe-ID).
+Zu Ausbildungsberufen, Weiterbildungsberufen und Studiengängen werden darüber hinaus idR. Informationen zu einer zugeordneten Tätigkeit ausgewiesen (mit separater Berufs-ID).
 
 ### Beispiel:
 
