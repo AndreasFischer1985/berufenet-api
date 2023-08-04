@@ -88,7 +88,7 @@ Zu Ausbildungsberufen, Weiterbildungsberufen und Studiengängen werden darüber 
 ### Beispiel:
 
 ```bash
-berufe=$(curl -m 60 \
+berufeinfo=$(curl -m 60 \
 -H "X-API-Key: d672172b-f3ef-4746-b659-227c39d95acf" \
 "https://rest.arbeitsagentur.de/infosysbub/bnet/pc/v1/berufe/129987")
 ```
