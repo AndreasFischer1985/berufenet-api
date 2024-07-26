@@ -3,11 +3,12 @@ info:
   title: "Arbeitsagentur Berufenet API"
   description: |
    Die Bundesagentur für Arbeit verfügt mit BERUFENET über das umfangreichste Lexikon der Berufe in Deutschland.
-   
-   **Client-ID:** d672172b-f3ef-4746-b659-227c39d95acf
-   
-   Die Client-ID muss bei allen GET-requests als Header-Feld 'X-API-Key' übergeben werden.
-  version: "1.0.0"
+   Die Authentifizierung funktioniert über die *clientId* von Berufenet, die einem GET-request an https://web.arbeitsagentur.de/berufenet/ergebnisseite/berufe-a-z entnommen werden kann:
+
+   *clientId*: infosysbub-berufenet
+
+   Bei folgenden GET-requests ist die clientId als Header-Parameter 'X-API-Key' zu übergeben.
+  version: "1.0.1"
   contact:
     name: "AndreasFischer1985"
     email: "andreasfischer1985@web.de"

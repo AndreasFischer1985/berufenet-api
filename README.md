@@ -1,15 +1,15 @@
 # Arbeitsagentur Berufenet API 
 Die Bundesagentur für Arbeit verfügt mit BERUFENET über das umfangreichste Lexikon der Berufe in Deutschland.
 
-Aktuell listet BERUFENET 3569 Berufe, davon 830 Ausbildungsberufe, 725 Studiengänge, 748 Weiterbildungsberufe - die zu 94% konkreten Tätigkeiten zugeordnet sind - und 1266 sonstige Tätigkeiten (von Helfertätigkeiten bis zu Hochschulberufen). Insg. werden 2730 Tätigkeiten unterschieden. Neben den gelisteten Berufen ist auch ein Zugriff auf nicht-gelistete Berufe möglich (z.B. ID 1674) jedoch nicht Gegenstand der vorliegenden Dokumentation.
+BERUFENET listet etwa 3569 Berufe, davon 830 Ausbildungsberufe, 725 Studiengänge, 748 Weiterbildungsberufe - die zu 94% konkreten Tätigkeiten zugeordnet sind - und 1266 sonstige Tätigkeiten (von Helfertätigkeiten bis zu Hochschulberufen). Insg. werden 2730 Tätigkeiten unterschieden. Neben den gelisteten Berufen ist auch ein Zugriff auf nicht-gelistete Berufe möglich (z.B. ID 1674) jedoch nicht Gegenstand der vorliegenden Dokumentation.
 
 
 ## Authentifizierung
-Die Authentifizierung funktioniert über die client-id von Berufenet, die einem GET-request an https://web.arbeitsagentur.de/berufenet/ergebnisseite/berufe-a-z entnommen werden kann:
+Die Authentifizierung funktioniert über die *clientId* von Berufenet, die einem GET-request an https://web.arbeitsagentur.de/berufenet/ergebnisseite/berufe-a-z entnommen werden kann:
 
-**Client-ID:** d672172b-f3ef-4746-b659-227c39d95acf
+**clientId**: infosysbub-berufenet
 
-Die Client-ID muss bei allen GET-requests als Header-Feld 'X-API-Key' übergeben werden.
+Bei folgenden GET-requests ist die clientId als Header-Parameter 'X-API-Key' zu übergeben.
 
 
 
@@ -77,13 +77,13 @@ Die Informationen umfassen:
 - Steckbrief
 - Aufstiegsweiterbildungen
 - Anpassungsweiterbildungen
-- Fachrichtunge
+- Fachrichtungen
 - Meta-Fachrichtung
 - Tätigkeitsfelder
 - Einsatzmöglichkeiten
 - Metaeinheit
 
-Zu Ausbildungsberufen, Weiterbildungsberufen und Studiengängen werden darüber hinaus idR. Informationen zu einer zugeordneten Tätigkeit ausgewiesen (mit separater Berufe-ID).
+Zu Ausbildungsberufen, Weiterbildungsberufen und Studiengängen werden darüber hinaus idR. Informationen zu einer zugeordneten Tätigkeit ausgewiesen (mit separater Berufs-ID).
 
 ### Beispiel:
 
