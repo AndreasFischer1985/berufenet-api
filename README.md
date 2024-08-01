@@ -17,7 +17,7 @@ Bei folgenden GET-requests ist die clientId als Header-Parameter 'X-API-Key' zu 
 
 **URL:** https://rest.arbeitsagentur.de/infosysbub/bnet/pc/v1/berufe
 	
-Berufenet ermöglicht die Abfrage von Berufs-ID und Kurzbezeichnung zu einer spezifizierten Teilmenge aller auf BERUFENET gelisteten Berufe. Die Spezifikation GET-Parameter, wobei maximal 20 Einträge pro Seite ausgegeben werden (siehe Parameter page).
+Berufenet ermöglicht die Abfrage von Berufs-ID und Kurzbezeichnung zu einer spezifizierten Teilmenge aller auf BERUFENET gelisteten Berufe. Die Spezifikation erfolgt über GET-Parameter, wobei maximal 20 Einträge pro Seite ausgegeben werden (siehe Parameter page).
 
 
 ### Parameter
@@ -88,7 +88,7 @@ Zu Ausbildungsberufen, Weiterbildungsberufen und Studiengängen werden darüber 
 ### Beispiel:
 
 ```bash
-berufe=$(curl -m 60 \
+berufeinfo=$(curl -m 60 \
 -H "X-API-Key: d672172b-f3ef-4746-b659-227c39d95acf" \
 "https://rest.arbeitsagentur.de/infosysbub/bnet/pc/v1/berufe/129987")
 ```

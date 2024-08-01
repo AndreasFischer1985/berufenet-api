@@ -62,7 +62,7 @@ paths:
             type: string
           description: |
             Berufecluster: "TC 0201" = reglementierte Berufe; "TC 101" = Mathematik; "TC 0102" = Informatik; "TC 0103" = Naturwissenschaft; "TC 104" = Technik. Mehrere Komma-separierte Einträge möglich, z.B. "TC 0101,TC 0102,TC 0103,TC 0104" für alle MINT-Berufe.
-          example: 0
+          example: "TC 0201"
           required: false
 
         - in: query
